@@ -1,0 +1,21 @@
+version: "3.4"
+
+services:
+  nginx:
+    image: nginx:1.12
+    container_name: nginx
+    volumes:
+      - .platform/nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    restart: always
+
+  django:
+    build:
+      context: .
+      dockerfile: ./docker/local/Dockerfile
+    container_name: apps
+    expose:
+      - "8000"
+    command: /start
+    restart: always

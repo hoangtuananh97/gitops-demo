@@ -1,0 +1,44 @@
+version: '3.4'
+
+services:
+
+  postgres:
+    image: postgres:14
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=tutorlio
+      - POSTGRES_USER=tutorlio
+      - POSTGRES_PASSWORD=123456
+    volumes:
+      - db_data:/var/lib/postgresql/data/
+    logging:
+      options:
+        max-size: "100m"
+
+  redis:
+    image: redis:latest
+    restart: always
+
+  api:
+    container_name: backend-api
+    restart: always
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.local
+    command: /start-dev.sh
+    ports:
+      - '8000:8000'
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings.base
+    env_file:
+      - ./config/settings/.env
+    volumes:
+      - .:/tutorlio
+    links:
+      - redis
+      - postgres
+
+volumes:
+  db_data:

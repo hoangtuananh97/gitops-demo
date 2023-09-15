@@ -1,0 +1,64 @@
+# Tools
+pre-commit
+
+# Django
+Django==4.2.4
+django-environ==0.10.0
+
+# Python-PostgreSQL Database Adapter
+psycopg2-binary==2.9.6
+
+# Models
+django-model-utils==4.3.1
+python_dateutil==2.8.2
+
+# DRF
+djangorestframework==3.14.0
+django-oauth-toolkit==2.3.0
+django-cors-headers==4.2.0
+dj-rest-auth== 4.0.1
+django-allauth==0.54.0
+
+# Sendgird
+sendgrid-django==4.2.0
+
+# Document
+drf-yasg==1.21.7
+
+# Celery
+celery==5.3.1
+redis==4.6.0
+django-celery-beat==2.5.0
+django-celery-results==2.5.1
+celery-once==3.0.1
+greenlet==2.0.2
+eventlet==0.33.3
+
+# debug
+django_extensions==3.2.3
+django-debug-toolbar==4.1.0
+
+# WSGI Handler
+gunicorn==21.2.0
+importlib-metadata==6.8.0
+
+# storage
+boto==2.49.0
+django-storages==1.13.2
+
+# Faker
+Faker==2.0.4
+
+# JWT
+PyJWT==2.8.0
+djangorestframework_simplejwt==5.2.2
+cryptography==41.0.3
+
+# Bug Service
+sentry-sdk==1.29.2
+
+# Django cache memoize
+django-cache-memoize==0.1.10
+
+# django health check plus
+django-health-check-plus==2.0.1
