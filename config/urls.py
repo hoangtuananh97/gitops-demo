@@ -26,7 +26,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title="Tutorlio API",
         default_version="v1",
-        description="Tutorlio APIs",
+        description="Tutorlio API",
         contact=openapi.Contact(email="noreply@gmail.com"),
         license=openapi.License(name="API License"),
     ),
