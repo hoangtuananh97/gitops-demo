@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     container: python:3.11
 
-    services:
+#    services:
 #      postgres:
 #        credentials:
 #          username: ${{ github.actor }}
