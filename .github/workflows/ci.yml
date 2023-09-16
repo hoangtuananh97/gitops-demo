@@ -86,9 +86,9 @@ jobs:
 #          pre-commit run --all
 #        if: ${{ always() }}
 
-      - name: Migrate database
-        run: |
-          python manage.py migrate --noinput
+#      - name: Migrate database
+#        run: |
+#          python manage.py migrate --noinput
 
 #      - name: Test with pytest
 #        run: |
