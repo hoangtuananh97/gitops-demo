@@ -20,7 +20,7 @@ services:
       - "8000"
     command: /start
     volumes:
-      - static_files:/usr/src/apps/staticfiles
+      - static_files:/apps/static
       - .:/apps:z
     restart: always
 
