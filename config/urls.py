@@ -24,7 +24,7 @@ from rest_framework import permissions
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Tutorlio APIs",
+        title="Tutorlio API",
         default_version="v1",
         description="Tutorlio API",
         contact=openapi.Contact(email="noreply@gmail.com"),
